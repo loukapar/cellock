@@ -11,12 +11,10 @@ const UserModal = ({ mode, show, handleClose, user }) => {
       }}
     >
       <Modal.Header closeButton>
-        <Modal.Title>
-          {mode === "EDIT" ? "Edit User" : "Create User"}
-        </Modal.Title>
+        <Modal.Title>{user ? "Edit User" : "Create User"}</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <UserForm mode={mode} user={user} closeModal={handleClose} />
+        <UserForm user={user} closeModal={handleClose} />
       </Modal.Body>
     </Modal>
   );
