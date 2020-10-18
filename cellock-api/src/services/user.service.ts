@@ -16,7 +16,8 @@ export interface PatchUserBody {
 
 export class UserMethods {
   static async getAll(): Promise<IUser[]> {
-    let user = await DB.Models.User.find({});
+    let adminID = (await DB.Models.AccessControl.find({}))[0].user_id;
+    let user = await DB.Models.User.find({ _id: { $ne: adminID } });
     return user;
   }
 

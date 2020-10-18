@@ -18,6 +18,13 @@ app.use(bodyParser.json());
 /**
  * Routes Definitions
  */
+app.all("*", function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "*");
+  res.header("Access-Control-Allow-Methods", "OPTIONS, GET, PATCH, POST, DELETE");
+  next();
+});
+
 app.get("/", (req: express.Request, res: express.Response) => {
   res.send("API works");
 });
