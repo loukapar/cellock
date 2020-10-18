@@ -1,0 +1,21 @@
+.page_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.page_container .card {
+  width: 50%;
+}
+
+.page_container .card h2 {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+@media (max-width: 767px) {
+  .page_container .card {
+    width: 100%;
+  }
+}

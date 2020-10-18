@@ -1,0 +1,15 @@
+.table .actions_cell,
+.table .cell_center {
+  text-align: center;
+}
+
+.table td {
+  vertical-align: middle;
+}
+
+.table .actions_cell .action_button {
+  font-size: 15px;
+  line-height: 15px;
+  margin-right: 0.2rem;
+  margin-left: 0.2rem;
+}

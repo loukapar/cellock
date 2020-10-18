@@ -1,18 +1,26 @@
 import React from "react";
 import Navigator from "./navigation/navigator";
-import "./App.css";
+import "./app.module.css";
 import navigationPages from "./navigation/navigations";
+import { Provider } from "react-redux";
+import store from "./redux/store";
 
 function App() {
   return (
-    <Navigator
-      routes={[
-        {
-          ...navigationPages.landingPage(),
-          exact: true,
-        },
-      ]}
-    />
+    <Provider store={store}>
+      <Navigator
+        routes={[
+          {
+            ...navigationPages.loginPage(),
+            exact: true,
+          },
+          {
+            ...navigationPages.usersPage(),
+            exact: true,
+          },
+        ]}
+      />
+    </Provider>
   );
 }
 

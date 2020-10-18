@@ -1,0 +1,14 @@
+.user_form {
+  width: 100%;
+}
+
+.user_form .footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.user_form .footer button {
+  width: 40%;
+}
